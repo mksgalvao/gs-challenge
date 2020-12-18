@@ -1,11 +1,15 @@
 import "./App.scss";
 
 import { Container } from "./Components/Container";
+import { MuiThemeProvider } from "@material-ui/core/styles";
+import { gsTheme } from "./Theme/ThemeProvider";
 
 function App() {
   return (
     <div className="App">
-      <Container />
+      <MuiThemeProvider theme={gsTheme}>
+        <Container />
+      </MuiThemeProvider>
     </div>
   );
 }

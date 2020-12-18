@@ -1,11 +1,14 @@
 import React from "react";
-import { NavbarComponent } from "./NavbarComponent";
+import { NavbarComponent } from "./NavbarComponent/NavbarComponent";
+import { PhonesWrapper } from "./PhonesWrapper";
 
 export const Container = () => {
   return (
     <>
       <NavbarComponent />
-      <div className="vh-100 wh-100"></div>
+      <div>
+        <PhonesWrapper />
+      </div>
     </>
   );
 };
