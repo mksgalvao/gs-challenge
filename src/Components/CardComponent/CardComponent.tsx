@@ -19,10 +19,6 @@ export const CardComponent = (props: any) => {
   const classes = cardComponentStyles();
   const [expanded, setExpanded] = React.useState(false);
 
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
-
   return (
     <div className={classes.cardsWrapper}>
       {props.products.map((product: any) => (
