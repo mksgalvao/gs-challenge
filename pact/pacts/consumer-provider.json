@@ -1,0 +1,55 @@
+{
+  "consumer": {
+    "name": "consumer"
+  },
+  "provider": {
+    "name": "provider"
+  },
+  "interactions": [
+    {
+      "description": "A get request to get a list of phones",
+      "providerState": "2 phones exists",
+      "request": {
+        "method": "GET",
+        "path": "/phones"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": [
+          {
+            "id": 0,
+            "name": "iPhone 7",
+            "manufacturer": "Apple",
+            "description": "lorem ipsum dolor sit amet consectetur.",
+            "color": "black",
+            "price": 769,
+            "imageFileName": "Iphone7.jpg",
+            "screen": "4,7 inch IPS",
+            "processor": "A10 Fusion",
+            "ram": 2
+          },
+          {
+            "id": 1,
+            "name": "Galaxy 7",
+            "manufacturer": "Samsung",
+            "description": "lorem ipsum dolor sit amet consectetur.",
+            "color": "black",
+            "price": 769,
+            "imageFileName": "Galaxy7.jpg",
+            "screen": "4,7 inch IPS",
+            "processor": "A10 Fusion",
+            "ram": 2
+          }
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}

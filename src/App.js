@@ -1,6 +1,6 @@
 import "./App.scss";
 
-import { Container } from "./Components/Container";
+import { Container } from "./components/Container";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import { gsTheme } from "./styles/ThemeProvider";
 

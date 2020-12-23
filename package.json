@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^4.11.2",
     "@material-ui/icons": "^4.11.2",
+    "@pact-foundation/pact": "^9.13.0",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.6.0",
@@ -14,7 +15,10 @@
     "@types/react-dom": "^17.0.0",
     "@types/react-redux": "^7.1.12",
     "@types/redux": "^3.6.0",
+    "axios": "^0.21.1",
     "bootstrap": "^4.5.3",
+    "jest-junit": "^12.0.0",
+    "jest-pact": "^0.8.1",
     "node-sass": "^4.14.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
@@ -24,6 +28,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "redux": "^4.0.5",
+    "ts-jest": "^26.4.4",
     "typescript": "^4.1.3",
     "web-vitals": "^0.2.4"
   },
@@ -31,6 +36,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "jest": "jest *.spec.ts --runInBand",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
