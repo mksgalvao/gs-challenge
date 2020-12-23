@@ -1,5 +1,5 @@
-I, [2020-12-23T16:43:38.927332 #208596]  INFO -- : Registered expected interaction GET /phones
-D, [2020-12-23T16:43:38.927720 #208596] DEBUG -- : {
+I, [2020-12-24T09:35:42.992708 #263101]  INFO -- : Registered expected interaction GET /phones
+D, [2020-12-24T09:35:42.993256 #263101] DEBUG -- : {
   "description": "A get request to get a list of phones",
   "providerState": "2 phones exists",
   "request": {
@@ -40,25 +40,21 @@ D, [2020-12-23T16:43:38.927720 #208596] DEBUG -- : {
   },
   "metadata": null
 }
-I, [2020-12-23T16:43:38.945861 #208596]  INFO -- : Received request GET /phones
-D, [2020-12-23T16:43:38.946064 #208596] DEBUG -- : {
+I, [2020-12-24T09:35:43.000955 #263101]  INFO -- : Received request GET /phones
+D, [2020-12-24T09:35:43.001118 #263101] DEBUG -- : {
   "path": "/phones",
   "query": "",
   "method": "get",
   "headers": {
     "Accept": "application/json",
-    "Referer": "http://localhost/",
-    "User-Agent": "Mozilla/5.0 (linux) AppleWebKit/537.36 (KHTML, like Gecko) jsdom/16.4.0",
-    "Accept-Language": "en",
-    "Origin": "http://localhost",
-    "Host": "127.0.0.1:45727",
-    "Accept-Encoding": "gzip, deflate",
-    "Connection": "keep-alive",
+    "User-Agent": "axios/0.21.1",
+    "Host": "127.0.0.1:37869",
+    "Connection": "close",
     "Version": "HTTP/1.1"
   }
 }
-I, [2020-12-23T16:43:38.946517 #208596]  INFO -- : Found matching response for GET /phones
-D, [2020-12-23T16:43:38.946794 #208596] DEBUG -- : {
+I, [2020-12-24T09:35:43.001487 #263101]  INFO -- : Found matching response for GET /phones
+D, [2020-12-24T09:35:43.001672 #263101] DEBUG -- : {
   "status": 200,
   "headers": {
     "Content-Type": "application/json"
@@ -90,11 +86,11 @@ D, [2020-12-23T16:43:38.946794 #208596] DEBUG -- : {
     }
   ]
 }
-I, [2020-12-23T16:43:38.990625 #208596]  INFO -- : Verifying - interactions matched
-I, [2020-12-23T16:43:38.994300 #208596]  INFO -- : Cleared interactions
-I, [2020-12-23T16:43:39.002451 #208596]  INFO -- : Updating pact for provider at /home/mksgalvao/Desktop/GuideSmiths_challenge/guide-smiths-challenge/pact/pacts/consumer-provider.json
-I, [2020-12-23T16:43:39.003519 #208596]  INFO -- : *****************************************************************************
-I, [2020-12-23T16:43:39.003813 #208596]  INFO -- : Updating existing file ./home/mksgalvao/Desktop/GuideSmiths_challenge/guide-smiths-challenge/pact/pacts/consumer-provider.json as pactfile_write_mode is :update
-I, [2020-12-23T16:43:39.003951 #208596]  INFO -- : Only interactions defined in this test run will be updated.
-I, [2020-12-23T16:43:39.004012 #208596]  INFO -- : As interactions are identified by description and provider state, pleased note that if either of these have changed, the old interactions won't be removed from the pact file until the specs are next run with :pactfile_write_mode => :overwrite.
-I, [2020-12-23T16:43:39.004056 #208596]  INFO -- : *****************************************************************************
+I, [2020-12-24T09:35:43.008319 #263101]  INFO -- : Verifying - interactions matched
+I, [2020-12-24T09:35:43.012007 #263101]  INFO -- : Cleared interactions
+I, [2020-12-24T09:35:43.018995 #263101]  INFO -- : Updating pact for provider at /home/mksgalvao/Desktop/GuideSmiths_challenge/guide-smiths-challenge/pact/pacts/consumer-provider.json
+I, [2020-12-24T09:35:43.019764 #263101]  INFO -- : *****************************************************************************
+I, [2020-12-24T09:35:43.019853 #263101]  INFO -- : Updating existing file ./home/mksgalvao/Desktop/GuideSmiths_challenge/guide-smiths-challenge/pact/pacts/consumer-provider.json as pactfile_write_mode is :update
+I, [2020-12-24T09:35:43.019901 #263101]  INFO -- : Only interactions defined in this test run will be updated.
+I, [2020-12-24T09:35:43.019967 #263101]  INFO -- : As interactions are identified by description and provider state, pleased note that if either of these have changed, the old interactions won't be removed from the pact file until the specs are next run with :pactfile_write_mode => :overwrite.
+I, [2020-12-24T09:35:43.020009 #263101]  INFO -- : *****************************************************************************

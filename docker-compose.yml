@@ -7,4 +7,4 @@ services:
       - ./pact/pacts/:/app/pacts
     command: -p 8080 -d pacts
     ports:
-      - "8081:8080"
+      - "8080:8080"
