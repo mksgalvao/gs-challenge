@@ -2,7 +2,7 @@ import "./App.scss";
 
 import { Container } from "./Components/Container";
 import { MuiThemeProvider } from "@material-ui/core/styles";
-import { gsTheme } from "./Theme/ThemeProvider";
+import { gsTheme } from "./styles/ThemeProvider";
 
 function App() {
   return (

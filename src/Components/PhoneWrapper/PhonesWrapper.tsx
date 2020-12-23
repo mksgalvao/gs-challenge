@@ -1,7 +1,11 @@
 import React from "react";
-import { CardComponent } from "./CardComponent/CardComponent";
-import iphoneImage from "../assets/images/Iphone7.jpg";
-import galaxyImage from "../assets/images/Galaxy7.jpg";
+import { CardComponent } from "../CardComponent/CardComponent";
+import { phoneWrapperStyles } from "./PhonesWrapperStyle";
+import InputBase from "@material-ui/core/InputBase";
+import SearchIcon from "@material-ui/icons/Search";
+
+import iphoneImage from "../../assets/images/Iphone7.jpg";
+import galaxyImage from "../../assets/images/Galaxy7.jpg";
 
 const phones = [
   {
@@ -92,9 +96,40 @@ const phones = [
 
 export const PhonesWrapper = (props: any) => {
   // should be replaced for a card props type
+  const classes = phoneWrapperStyles();
+
+  const onDeleteClick = () => {
+    console.log("On delete");
+  };
+  const onMoreInfoClick = () => {
+    console.log("On more info");
+  };
+  const onEditClick = () => {
+    console.log("On edit");
+  };
   return (
     <div>
-      <CardComponent products={phones} />
+      <div className={classes.phoneWrapperHeader}>
+        <div className={classes.search}>
+          <div className={classes.searchIcon}>
+            <SearchIcon />
+          </div>
+          <InputBase
+            placeholder="Search…"
+            classes={{
+              root: classes.inputRoot,
+              input: classes.inputInput,
+            }}
+            inputProps={{ "aria-label": "search" }}
+          />
+        </div>
+      </div>
+      <CardComponent
+        products={phones}
+        onMoreInfo={onMoreInfoClick}
+        onDelete={onDeleteClick}
+        onEdit={onEditClick}
+      />
     </div>
   );
 };

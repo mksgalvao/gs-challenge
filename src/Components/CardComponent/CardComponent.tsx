@@ -17,12 +17,11 @@ import { cardComponentStyles } from "./CardComponentStyle";
 
 export const CardComponent = (props: any) => {
   const classes = cardComponentStyles();
-  const [expanded, setExpanded] = React.useState(false);
 
   return (
     <div className={classes.cardsWrapper}>
-      {props.products.map((product: any) => (
-        <Card className={classes.root}>
+      {props.products.map((product: any, index: number) => (
+        <Card key={index} className={classes.root}>
           <CardHeader title={product.name} subheader={product.manufacturer} />
           <CardMedia
             className={classes.media}
@@ -35,17 +34,22 @@ export const CardComponent = (props: any) => {
             </Typography>
           </CardContent>
           <CardActions disableSpacing>
-            <IconButton aria-label="delete">
+            <IconButton aria-label="delete" onClick={props.onDelete}>
               <DeleteIcon />
             </IconButton>
-            <IconButton aria-label="edit">
+            <IconButton aria-label="edit" onClick={props.onEdit}>
               <EditIcon />
             </IconButton>
-            <Button className={classes.moreInfo} size="small" color="secondary">
+            <Button
+              className={classes.moreInfo}
+              size="small"
+              color="secondary"
+              onClick={props.onMoreInfo}
+            >
               More Infos
             </Button>
           </CardActions>
-          <Collapse in={expanded} timeout="auto" unmountOnExit>
+          <Collapse timeout="auto" unmountOnExit>
             <CardContent>
               <Typography paragraph>{product.name}</Typography>
               <Typography paragraph>{product.price}</Typography>
