@@ -1,6 +1,6 @@
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 
-export const editPhoneModalStyle = makeStyles((theme: Theme) =>
+export const editPhoneStyle = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       height: 300,

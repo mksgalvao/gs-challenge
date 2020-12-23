@@ -1,10 +1,10 @@
 import React from "react";
 import Modal from "@material-ui/core/Modal";
-import { editPhoneModalStyle } from "./EditPhoneModalStyle";
+import { editPhoneStyle } from "./EditPhoneStyle";
 import { Input } from "@material-ui/core";
 
 export default function EditPhoneModal(props: any) {
-  const classes = editPhoneModalStyle();
+  const classes = editPhoneStyle();
   const rootRef = React.useRef<HTMLDivElement>(null);
 
   return (

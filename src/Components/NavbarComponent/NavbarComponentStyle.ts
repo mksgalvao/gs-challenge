@@ -1,11 +1,4 @@
-import {
-  createStyles,
-  fade,
-  Theme,
-  makeStyles,
-} from "@material-ui/core/styles";
-
-
+import { createStyles, Theme, makeStyles } from "@material-ui/core/styles";
 
 export const navbarStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -22,7 +15,5 @@ export const navbarStyles = makeStyles((theme: Theme) =>
         display: "block",
       },
     },
-    
-    
   })
 );
