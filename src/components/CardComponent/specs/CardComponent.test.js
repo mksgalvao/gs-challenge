@@ -4,9 +4,10 @@ import Adapter from "enzyme-adapter-react-16";
 enzyme.configure({ adapter: new Adapter() });
 
 import { shallow } from "enzyme";
+import { createMemoryHistory } from "history";
 import { CardComponent } from "../CardComponent";
+import Card from "@material-ui/core/Card";
 
-import { Link } from "react-router-dom";
 import IconButton from "@material-ui/core/IconButton";
 import { PhonesList } from "../../../fixtures/phoneFixtures";
 
@@ -23,7 +24,6 @@ describe("Testing cardComponent", () => {
         products={PhonesList}
         onDelete={onDeletemock}
         onEdit={onEditmock}
-        onMoreInfo={onMoreInfosmock}
       />
     );
   });
@@ -41,12 +41,13 @@ describe("Testing cardComponent", () => {
     editButton.simulate("click");
     expect(onEditmock).toHaveBeenCalledTimes(1);
   });
-  it("Should call moreInfo function when click in more info button", () => {
-    // improve this test
-    // const history = createMemoryHistory();
-    // history.push = jest.fn();
-    // const moreInfos = cardComponent.find(Link);
-    // moreInfos.simulate("click");
-    // expect(history.push).toHaveBeenCalledWith("/");
-  });
+
+  // TODO fix this test
+  // it("Should call moreInfo function when click in more info button", () => {
+  //   const history = createMemoryHistory();
+  //   history.push("/");
+  //   const moreInfos = cardComponent.find(Card).at(0);
+  //   moreInfos.simulate("click");
+  //   expect(history.push).toHaveBeenCalledWith("info/iPhone%207");
+  // });
 });

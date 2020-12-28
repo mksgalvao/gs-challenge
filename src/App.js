@@ -5,7 +5,7 @@ import { gsTheme } from "./styles/ThemeProvider";
 
 import { PhonesContainer } from "./containers/PhonesContainer/PhonesContainer";
 import { NavbarComponent } from "../src/components/NavbarComponent/NavbarComponent";
-import { PhonesInfo } from "./containers/PhonesContainer/PhonesInfo";
+import { PhonesInfo } from "./components/PhonesInfo/PhonesInfo";
 
 import {
   BrowserRouter as Router,

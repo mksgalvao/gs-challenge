@@ -11,12 +11,13 @@ export const cardComponentStyles = makeStyles((theme: Theme) =>
         maxWidth: "100%",
       },
     },
-    root: {
+    cardRoot: {
       maxWidth: 385,
       margin: 10,
       [theme.breakpoints.between("xs", "sm")]: {
         alignItems: "center",
       },
+      cursor: "pointer",
     },
     media: {
       height: 0,
@@ -28,16 +29,5 @@ export const cardComponentStyles = makeStyles((theme: Theme) =>
       },
     },
     moreInfo: { marginLeft: "auto" },
-
-    expand: {
-      transform: "rotate(0deg)",
-      marginLeft: "auto",
-      transition: theme.transitions.create("transform", {
-        duration: theme.transitions.duration.shortest,
-      }),
-    },
-    expandOpen: {
-      transform: "rotate(180deg)",
-    },
   })
 );

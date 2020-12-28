@@ -39,7 +39,6 @@ export const PhonesWrapper = (props: any) => {
         <CircularProgress color="secondary" />
       ) : (
         <>
-          {console.log(phones)}
           <div className={classes.phoneWrapperHeader}>
             <div className={classes.search}>
               <div className={classes.searchIcon}>

@@ -1,6 +1,4 @@
 import { InteractionObject } from "@pact-foundation/pact";
-import iphoneImage from "../assets/images/Iphone7.jpg";
-import galaxyImage from "../assets/images/Galaxy7.jpg";
 
 export const iPhone7 = {
   id: 0,
@@ -9,7 +7,8 @@ export const iPhone7 = {
   description: "lorem ipsum dolor sit amet consectetur.",
   color: "black",
   price: 769,
-  imageFileName: iphoneImage,
+  imageFileName:
+    "https://benotac.es/wp-content/uploads/2018/06/iPhone7-Negro-Mate-Angulos.jpg",
   screen: "4,7 inch IPS",
   processor: "A10 Fusion",
   ram: 2,
@@ -22,7 +21,7 @@ export const Galaxy7 = {
   description: "lorem ipsum dolor sit amet consectetur.",
   color: "black",
   price: 769,
-  imageFileName: galaxyImage,
+  imageFileName: "https://images.mobilefun.co.uk/graphics/450pixelp/57143.jpg",
   screen: "4,7 inch IPS",
   processor: "A10 Fusion",
   ram: 2,
@@ -30,61 +29,64 @@ export const Galaxy7 = {
 
 export const PhonesList = [
   {
-    id: 1,
-    name: "Galaxy 7",
-    manufacturer: "Samsung",
+    id: 0,
+    name: "iPhone 7",
+    manufacturer: "Apple",
     description: "lorem ipsum dolor sit amet consectetur.",
     color: "black",
     price: 769,
-    imageFileName: iphoneImage,
+    imageFileName:
+      "https://benotac.es/wp-content/uploads/2018/06/iPhone7-Negro-Mate-Angulos.jpg",
     screen: "4,7 inch IPS",
     processor: "A10 Fusion",
     ram: 2,
   },
   {
-    id: 1,
+    id: 2,
     name: "Galaxy 7",
     manufacturer: "Samsung",
     description: "lorem ipsum dolor sit amet consectetur.",
     color: "black",
     price: 769,
-    imageFileName: iphoneImage,
+    imageFileName:
+      "https://images.mobilefun.co.uk/graphics/450pixelp/57143.jpg",
     screen: "4,7 inch IPS",
     processor: "A10 Fusion",
     ram: 2,
   },
   {
-    id: 1,
-    name: "Galaxy 7",
-    manufacturer: "Samsung",
+    id: 3,
+    name: "Redmi note 9",
+    manufacturer: "Xiaomi",
     description: "lorem ipsum dolor sit amet consectetur.",
     color: "black",
     price: 769,
-    imageFileName: iphoneImage,
+    imageFileName:
+      "https://i.blogs.es/a94951/xiaomi-redmi-note-9-pro-00-04/1366_2000.jpg",
     screen: "4,7 inch IPS",
     processor: "A10 Fusion",
     ram: 2,
   },
   {
-    id: 1,
-    name: "Galaxy 7",
-    manufacturer: "Samsung",
+    id: 4,
+    name: "Moto g7",
+    manufacturer: "Motorola",
     description: "lorem ipsum dolor sit amet consectetur.",
     color: "black",
     price: 769,
-    imageFileName: iphoneImage,
+    imageFileName: "https://static.kemikcdn.com/2019/11/G7x2.jpg",
     screen: "4,7 inch IPS",
     processor: "A10 Fusion",
     ram: 2,
   },
   {
-    id: 1,
-    name: "Galaxy 7",
-    manufacturer: "Samsung",
+    id: 5,
+    name: "Asus Zenphone 5",
+    manufacturer: "asus",
     description: "lorem ipsum dolor sit amet consectetur.",
     color: "black",
     price: 769,
-    imageFileName: iphoneImage,
+    imageFileName: "https://i.zst.com.br/thumbs/12/34/37/602513659.jpg",
     screen: "4,7 inch IPS",
     processor: "A10 Fusion",
     ram: 2,
@@ -92,11 +94,11 @@ export const PhonesList = [
 ];
 
 export const getPhonesValidInteraction: InteractionObject = {
-  state: "2 phones exists",
+  state: "a phone list exists",
   uponReceiving: "A get request to get a list of phones",
   willRespondWith: {
     status: 200,
-    body: [iPhone7, Galaxy7],
+    body: PhonesList,
     headers: {
       "Content-Type": "application/json",
     },

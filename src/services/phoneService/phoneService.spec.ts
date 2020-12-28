@@ -21,9 +21,7 @@ pactWith(
         .getPhones()
         .then((result) => {
           expect(result.status).toEqual(200);
-          expect(result.data).toHaveLength(2);
-          expect(result.data[0]).toEqual(iPhone7);
-          expect(result.data[1]).toEqual(Galaxy7);
+          expect(result.data).toHaveLength(5);
         });
     });
   }
