@@ -1,8 +1,7 @@
+import { PhoneService } from "../services/phoneService/phone.service";
 export const GET_PHONES_SUCCESS = "GET_PHONES_SUCCESS";
 export const GET_PHONES_ERROR = "GET_PHONES_ERROR";
 export const GET_PHONES_LOADING = "GET_PHONES_LOADING";
-
-import { PhoneService } from "../services/phoneService/phone.service";
 
 export const getProductList = () => (dispatch: any) => {
   dispatch({

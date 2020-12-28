@@ -7,7 +7,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
 import Collapse from "@material-ui/core/Collapse";
 import IconButton from "@material-ui/core/IconButton";
-import Button from "@material-ui/core/Button";
+import { Link } from "react-router-dom";
 
 import Typography from "@material-ui/core/Typography";
 import EditIcon from "@material-ui/icons/Edit";
@@ -40,14 +40,7 @@ export const CardComponent = (props: any) => {
             <IconButton aria-label="edit" onClick={props.onEdit}>
               <EditIcon />
             </IconButton>
-            <Button
-              className={classes.moreInfo}
-              size="small"
-              color="secondary"
-              onClick={props.onMoreInfo}
-            >
-              More Infos
-            </Button>
+            <Link to={`/info/${product.name}`}>More Infos</Link>
           </CardActions>
           <Collapse timeout="auto" unmountOnExit>
             <CardContent>

@@ -3,6 +3,7 @@ import { CardComponent } from "../CardComponent/CardComponent";
 import { phoneWrapperStyles } from "./PhonesWrapperStyle";
 import InputBase from "@material-ui/core/InputBase";
 import SearchIcon from "@material-ui/icons/Search";
+import history from "../../@history";
 
 import iphoneImage from "../../assets/images/Iphone7.jpg";
 import galaxyImage from "../../assets/images/Galaxy7.jpg";
@@ -10,7 +11,7 @@ import galaxyImage from "../../assets/images/Galaxy7.jpg";
 const phones = [
   {
     id: 0,
-    name: "iPhone 7",
+    name: "iPhone7",
     manufacturer: "Apple",
     description: "lorem ipsum dolor sit amet consectetur.",
     color: "black",
@@ -22,7 +23,7 @@ const phones = [
   },
   {
     id: 1,
-    name: "Galaxy 7",
+    name: "Galaxy7",
     manufacturer: "Samsung",
     description: "lorem ipsum dolor sit amet consectetur.",
     color: "black",
@@ -41,8 +42,10 @@ export const PhonesWrapper = (props: any) => {
   const onDeleteClick = () => {
     console.log("On delete");
   };
-  const onMoreInfoClick = () => {
-    console.log("On more info");
+  const onMoreInfoClick = (phoneName: string) => {
+    return history.push({
+      pathname: `/info/${phoneName}`,
+    });
   };
   const onEditClick = () => {
     console.log("On edit");
