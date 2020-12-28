@@ -7,7 +7,7 @@ import {
 const initialState = {
   loading: false,
   error: false,
-  success: [],
+  phones: [],
 };
 
 const PhoneReducer = (state = initialState, action: any) => {
@@ -15,18 +15,15 @@ const PhoneReducer = (state = initialState, action: any) => {
   switch (action.type) {
     case GET_PHONES_LOADING:
       return {
-        ...state,
         loading: true,
       };
     case GET_PHONES_ERROR:
       return {
-        ...state,
         error: true,
         loading: false,
       };
     case GET_PHONES_SUCCESS:
       return {
-        ...state,
         loading: false,
         phones: action.data,
       };

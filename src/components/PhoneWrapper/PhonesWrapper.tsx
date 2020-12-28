@@ -1,47 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { getPhonesList } from "../../actions/phonesActions";
 import { CardComponent } from "../CardComponent/CardComponent";
 import { phoneWrapperStyles } from "./PhonesWrapperStyle";
 import InputBase from "@material-ui/core/InputBase";
+import CircularProgress from "@material-ui/core/CircularProgress";
 import SearchIcon from "@material-ui/icons/Search";
 import history from "../../@history";
 
-import iphoneImage from "../../assets/images/Iphone7.jpg";
-import galaxyImage from "../../assets/images/Galaxy7.jpg";
-
-const phones = [
-  {
-    id: 0,
-    name: "iPhone7",
-    manufacturer: "Apple",
-    description: "lorem ipsum dolor sit amet consectetur.",
-    color: "black",
-    price: 769,
-    imageFileName: iphoneImage,
-    screen: "4,7 inch IPS",
-    processor: "A10 Fusion",
-    ram: 2,
-  },
-  {
-    id: 1,
-    name: "Galaxy7",
-    manufacturer: "Samsung",
-    description: "lorem ipsum dolor sit amet consectetur.",
-    color: "black",
-    price: 769,
-    imageFileName: galaxyImage,
-    screen: "4,7 inch IPS",
-    processor: "A10 Fusion",
-    ram: 2,
-  },
-];
-
+// should be replaced for a card props type
 export const PhonesWrapper = (props: any) => {
-  // should be replaced for a card props type
+  const dispatch = useDispatch();
   const classes = phoneWrapperStyles();
+  useEffect(() => {
+    dispatch(getPhonesList());
+  }, [dispatch]);
+  //@ts-ignore
+  //should remove it
+  const phones = useSelector((state) => state.phones.phones);
+  //@ts-ignore
+  const isLoading = useSelector((state) => state.phones.loading);
 
   const onDeleteClick = () => {
     console.log("On delete");
   };
+
   const onMoreInfoClick = (phoneName: string) => {
     return history.push({
       pathname: `/info/${phoneName}`,
@@ -52,27 +35,34 @@ export const PhonesWrapper = (props: any) => {
   };
   return (
     <div>
-      <div className={classes.phoneWrapperHeader}>
-        <div className={classes.search}>
-          <div className={classes.searchIcon}>
-            <SearchIcon />
+      {isLoading ? (
+        <CircularProgress color="secondary" />
+      ) : (
+        <>
+          {console.log(phones)}
+          <div className={classes.phoneWrapperHeader}>
+            <div className={classes.search}>
+              <div className={classes.searchIcon}>
+                <SearchIcon />
+              </div>
+              <InputBase
+                placeholder="Search…"
+                classes={{
+                  root: classes.inputRoot,
+                  input: classes.inputInput,
+                }}
+                inputProps={{ "aria-label": "search" }}
+              />
+            </div>
           </div>
-          <InputBase
-            placeholder="Search…"
-            classes={{
-              root: classes.inputRoot,
-              input: classes.inputInput,
-            }}
-            inputProps={{ "aria-label": "search" }}
+          <CardComponent
+            products={phones}
+            onMoreInfo={onMoreInfoClick}
+            onDelete={onDeleteClick}
+            onEdit={onEditClick}
           />
-        </div>
-      </div>
-      <CardComponent
-        products={phones}
-        onMoreInfo={onMoreInfoClick}
-        onDelete={onDeleteClick}
-        onEdit={onEditClick}
-      />
+        </>
+      )}
     </div>
   );
 };
