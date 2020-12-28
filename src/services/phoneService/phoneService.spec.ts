@@ -1,11 +1,11 @@
 import { Pact } from "@pact-foundation/pact";
 import { pactWith } from "jest-pact";
-import { PhoneService } from "./phone.service";
+import { PhoneService } from "./phoneService";
 import {
   iPhone7,
   Galaxy7,
   getPhonesValidInteraction,
-} from "../../fixtures/phone.fixtures";
+} from "../../fixtures/phoneFixtures";
 
 pactWith(
   { consumer: "consumer", provider: "provider" },

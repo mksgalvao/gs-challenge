@@ -1,4 +1,4 @@
-import { PhoneService } from "../services/phoneService/phone.service";
+import { PhoneService } from "../services/phoneService/phoneService";
 export const GET_PHONES_SUCCESS = "GET_PHONES_SUCCESS";
 export const GET_PHONES_ERROR = "GET_PHONES_ERROR";
 export const GET_PHONES_LOADING = "GET_PHONES_LOADING";
