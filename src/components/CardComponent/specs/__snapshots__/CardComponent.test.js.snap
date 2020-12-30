@@ -1,3 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Testing cardComponent CardComponent should render 1`] = `ShallowWrapper {}`;
+exports[`Testing cardComponent CardComponent should render 1`] = `
+<WithStyles(ForwardRef(Card))
+  className="makeStyles-cardRoot-1"
+  onClick={[Function]}
+>
+  <WithStyles(ForwardRef(CardHeader))
+    subheader="Apple"
+    title="iPhone 7"
+  />
+  <WithStyles(ForwardRef(CardMedia))
+    className="makeStyles-media-2"
+    image="https://benotac.es/wp-content/uploads/2018/06/iPhone7-Negro-Mate-Angulos.jpg"
+    title={769}
+  />
+  <WithStyles(ForwardRef(CardContent))>
+    <WithStyles(ForwardRef(Typography))
+      color="textSecondary"
+      component="p"
+      variant="body2"
+    >
+      lorem ipsum dolor sit amet consectetur.
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(CardContent))>
+  <WithStyles(ForwardRef(CardActions))
+    disableSpacing={true}
+  >
+    <WithStyles(ForwardRef(IconButton))
+      aria-label="delete"
+      onClick={[MockFunction]}
+    >
+      <Memo([object Object]) />
+    </WithStyles(ForwardRef(IconButton))>
+    <WithStyles(ForwardRef(IconButton))
+      aria-label="edit"
+      onClick={[MockFunction]}
+    >
+      <Memo([object Object]) />
+    </WithStyles(ForwardRef(IconButton))>
+  </WithStyles(ForwardRef(CardActions))>
+</WithStyles(ForwardRef(Card))>
+`;

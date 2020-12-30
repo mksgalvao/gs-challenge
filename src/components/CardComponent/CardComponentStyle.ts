@@ -2,15 +2,6 @@ import { createStyles, Theme, makeStyles } from "@material-ui/core/styles";
 
 export const cardComponentStyles = makeStyles((theme: Theme) =>
   createStyles({
-    cardsWrapper: {
-      display: "flex",
-      flexWrap: "wrap",
-
-      [theme.breakpoints.between("xs", "sm")]: {
-        flexDirection: "column !important",
-        maxWidth: "100%",
-      },
-    },
     cardRoot: {
       maxWidth: 385,
       margin: 10,

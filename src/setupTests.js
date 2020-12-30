@@ -3,6 +3,7 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import "@testing-library/jest-dom";
+import "jest-enzyme";
 
 // Issue: Error: Cross origin http://localhost forbidden
 // https://github.com/axios/axios/issues/2654

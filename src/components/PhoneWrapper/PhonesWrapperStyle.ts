@@ -7,6 +7,15 @@ import {
 
 export const phoneWrapperStyles = makeStyles((theme: Theme) =>
   createStyles({
+    cardsWrapper: {
+      display: "flex",
+      flexWrap: "wrap",
+
+      [theme.breakpoints.between("xs", "sm")]: {
+        flexDirection: "column !important",
+        maxWidth: "100%",
+      },
+    },
     phoneWrapperHeader: {
       margin: 20,
       maxWidth: 450,

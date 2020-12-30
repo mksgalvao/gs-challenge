@@ -12,10 +12,15 @@ export const PhonesInfo = (props: any) => {
   return (
     <div className={classes.root}>
       <Card className={classes.cardWrapper}>
+        <Typography paragraph>{product.name}</Typography>
         <CardMedia className={classes.media} image={product.imageFileName} />
         <CardContent>
-          <Typography paragraph>{product.name}</Typography>
-          <Typography paragraph>{product.price}</Typography>
+          <Typography paragraph>
+            {new Intl.NumberFormat("de-DE", {
+              style: "currency",
+              currency: "EUR",
+            }).format(product.price)}
+          </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             {product.description}
           </Typography>

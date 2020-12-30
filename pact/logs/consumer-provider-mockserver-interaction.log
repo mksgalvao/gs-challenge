@@ -1,5 +1,5 @@
-I, [2020-12-29T17:55:17.967009 #391753]  INFO -- : Registered expected interaction GET /phones
-D, [2020-12-29T17:55:17.967571 #391753] DEBUG -- : {
+I, [2020-12-30T09:17:00.670220 #395462]  INFO -- : Registered expected interaction GET /phones
+D, [2020-12-30T09:17:00.671134 #395462] DEBUG -- : {
   "description": "A get request to get a list of phones",
   "providerState": "a phone list exists",
   "request": {
@@ -76,21 +76,21 @@ D, [2020-12-29T17:55:17.967571 #391753] DEBUG -- : {
   },
   "metadata": null
 }
-I, [2020-12-29T17:55:17.975106 #391753]  INFO -- : Received request GET /phones
-D, [2020-12-29T17:55:17.975277 #391753] DEBUG -- : {
+I, [2020-12-30T09:17:00.680117 #395462]  INFO -- : Received request GET /phones
+D, [2020-12-30T09:17:00.680285 #395462] DEBUG -- : {
   "path": "/phones",
   "query": "",
   "method": "get",
   "headers": {
     "Accept": "application/json",
     "User-Agent": "axios/0.21.1",
-    "Host": "127.0.0.1:38683",
+    "Host": "127.0.0.1:46031",
     "Connection": "close",
     "Version": "HTTP/1.1"
   }
 }
-I, [2020-12-29T17:55:17.975973 #391753]  INFO -- : Found matching response for GET /phones
-D, [2020-12-29T17:55:17.976468 #391753] DEBUG -- : {
+I, [2020-12-30T09:17:00.680834 #395462]  INFO -- : Found matching response for GET /phones
+D, [2020-12-30T09:17:00.681177 #395462] DEBUG -- : {
   "status": 200,
   "headers": {
     "Content-Type": "application/json"
@@ -158,11 +158,11 @@ D, [2020-12-29T17:55:17.976468 #391753] DEBUG -- : {
     }
   ]
 }
-I, [2020-12-29T17:55:17.982932 #391753]  INFO -- : Verifying - interactions matched
-I, [2020-12-29T17:55:17.987021 #391753]  INFO -- : Cleared interactions
-I, [2020-12-29T17:55:17.994329 #391753]  INFO -- : Updating pact for provider at /home/mksgalvao/Desktop/GuideSmiths_challenge/guide-smiths-challenge/pact/pacts/consumer-provider.json
-I, [2020-12-29T17:55:17.995226 #391753]  INFO -- : *****************************************************************************
-I, [2020-12-29T17:55:17.995429 #391753]  INFO -- : Updating existing file ./home/mksgalvao/Desktop/GuideSmiths_challenge/guide-smiths-challenge/pact/pacts/consumer-provider.json as pactfile_write_mode is :update
-I, [2020-12-29T17:55:17.995473 #391753]  INFO -- : Only interactions defined in this test run will be updated.
-I, [2020-12-29T17:55:17.995502 #391753]  INFO -- : As interactions are identified by description and provider state, pleased note that if either of these have changed, the old interactions won't be removed from the pact file until the specs are next run with :pactfile_write_mode => :overwrite.
-I, [2020-12-29T17:55:17.995528 #391753]  INFO -- : *****************************************************************************
+I, [2020-12-30T09:17:00.687194 #395462]  INFO -- : Verifying - interactions matched
+I, [2020-12-30T09:17:00.690862 #395462]  INFO -- : Cleared interactions
+I, [2020-12-30T09:17:00.697532 #395462]  INFO -- : Updating pact for provider at /home/mksgalvao/Desktop/GuideSmiths_challenge/guide-smiths-challenge/pact/pacts/consumer-provider.json
+I, [2020-12-30T09:17:00.698709 #395462]  INFO -- : *****************************************************************************
+I, [2020-12-30T09:17:00.698855 #395462]  INFO -- : Updating existing file ./home/mksgalvao/Desktop/GuideSmiths_challenge/guide-smiths-challenge/pact/pacts/consumer-provider.json as pactfile_write_mode is :update
+I, [2020-12-30T09:17:00.698900 #395462]  INFO -- : Only interactions defined in this test run will be updated.
+I, [2020-12-30T09:17:00.698928 #395462]  INFO -- : As interactions are identified by description and provider state, pleased note that if either of these have changed, the old interactions won't be removed from the pact file until the specs are next run with :pactfile_write_mode => :overwrite.
+I, [2020-12-30T09:17:00.698951 #395462]  INFO -- : *****************************************************************************
