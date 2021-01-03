@@ -1,6 +1,19 @@
 import { InteractionObject } from "@pact-foundation/pact";
 
-export const iPhone7 = {
+export interface PhoneType {
+  id: number;
+  name: string;
+  manufacturer: string;
+  description: string;
+  color: string;
+  price: number;
+  imageFileName: string;
+  screen: string;
+  processor: string;
+  ram: number;
+}
+
+export const iPhone7: PhoneType = {
   id: 0,
   name: "iPhone 7",
   manufacturer: "Apple",
@@ -14,7 +27,7 @@ export const iPhone7 = {
   ram: 2,
 };
 
-export const Galaxy7 = {
+export const Galaxy7: PhoneType = {
   id: 1,
   name: "Galaxy 7",
   manufacturer: "Samsung",
@@ -27,7 +40,7 @@ export const Galaxy7 = {
   ram: 2,
 };
 
-export const PhonesList = [
+export const PhonesList: PhoneType[] = [
   {
     id: 0,
     name: "iPhone 7",

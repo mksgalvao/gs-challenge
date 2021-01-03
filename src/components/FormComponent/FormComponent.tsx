@@ -2,12 +2,7 @@ import React from "react";
 import { Formik, Field, Form, FormikHelpers } from "formik";
 import { Button, Dialog } from "@material-ui/core";
 import { formComponentStyle } from "./FormComponent.style";
-
-interface Values {
-  phoneName: string;
-  price: string;
-  description: string;
-}
+import { PhoneType as Values } from "../../fixtures/phoneFixtures";
 
 export const FormComponent = (props: any) => {
   const classes = formComponentStyle();
@@ -31,6 +26,7 @@ export const FormComponent = (props: any) => {
           {props.showModal.type.toUpperCase()} Phone
         </h1>
         <Formik
+          //@ts-ignore
           initialValues={
             props.showModal.type === "add"
               ? {
