@@ -40,7 +40,7 @@ const PhoneReducer = (state = initialState, action: any) => {
     case GET_PHONES_SUCCESS:
       return {
         loadingGetPhones: false,
-        phones: action.data,
+        phones: action.data.phones,
       };
     case UPDATE_PHONE_LOADING:
       return {

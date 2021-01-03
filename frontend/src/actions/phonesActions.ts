@@ -18,8 +18,9 @@ export const getPhonesList = () => (dispatch: any) => {
     type: GET_PHONES_LOADING,
   });
 
-  const phonesService = new PhoneService("http://localhost:8080");
+  const phonesService = new PhoneService("http://localhost:5000/api");
   phonesService.getPhones().then((response) => {
+    console.log("->", response);
     if (response.status === 200) {
       dispatch({
         type: GET_PHONES_SUCCESS,
@@ -38,7 +39,7 @@ export const addPhone = (phone: PhoneType) => (dispatch: any) => {
     type: ADD_PHONE_LOADING,
   });
 
-  const phonesService = new PhoneService("http://localhost:8080");
+  const phonesService = new PhoneService("http://localhost:5000/api");
   phonesService.addPhone(phone).then((response) => {
     if (response.status === 200) {
       dispatch({
@@ -58,7 +59,7 @@ export const deletePhone = (phoneId: number) => (dispatch: any) => {
     type: DELETE_PHONE_LOADING,
   });
 
-  const phonesService = new PhoneService("http://localhost:8080");
+  const phonesService = new PhoneService("http://localhost:5000/api");
   phonesService.deletePhone(phoneId).then((response) => {
     if (response.status === 200) {
       dispatch({
@@ -78,7 +79,7 @@ export const updatePhone = (phone: PhoneType) => (dispatch: any) => {
     type: UPDATE_PHONE_LOADING,
   });
 
-  const phonesService = new PhoneService("http://localhost:8080");
+  const phonesService = new PhoneService("http://localhost:5000/api");
   phonesService.updatePhone(phone).then((response) => {
     if (response.status === 200) {
       dispatch({

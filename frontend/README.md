@@ -58,5 +58,6 @@ npm start
 ## NEXT STEPS
 
 make unitary tests for all components
+put the api url in .env file
 improve responsivity
 deploy frontend

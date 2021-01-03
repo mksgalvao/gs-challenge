@@ -22,8 +22,8 @@ export const PhonesWrapper = (props: any) => {
     dispatch(getPhonesList());
   }, [dispatch]);
   //@ts-ignore
-  //should remove it
   const phones = useSelector((state) => state.phones.phones);
+
   //@ts-ignore
   const isLoading = useSelector((state) => state.phones.loading);
 
@@ -82,6 +82,7 @@ export const PhonesWrapper = (props: any) => {
         </>
       ) : (
         <>
+          {console.log(phones)}
           <div className={classes.phoneWrapperHeader}>
             <div className={classes.search}>
               <div className={classes.searchIcon}>
@@ -99,10 +100,10 @@ export const PhonesWrapper = (props: any) => {
             </div>
           </div>
           <div className={classes.cardsWrapper}>
-            {filteredPhones.map((phone: any, index: number) => (
+            {Object.entries(filteredPhones).map((phone: any, index: number) => (
               <CardComponent
                 key={index}
-                phone={phone}
+                phone={phone[1]}
                 onCardClick={onCardClick}
                 onDelete={(e: React.MouseEvent<HTMLElement>) => {
                   onDeleteClick(e, phone);

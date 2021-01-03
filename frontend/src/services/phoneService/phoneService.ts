@@ -16,21 +16,20 @@ export class PhoneService {
   };
 
   public deletePhone = (phoneId: number): AxiosPromise<Phone[]> => {
-    return axios.delete(`${this.url}/phones`, {
+    return axios.delete(`${this.url}/${phoneId}`, {
       headers: { Accept: "application/json" },
-      data: phoneId,
     });
   };
 
   public addPhone = (phone: PhoneType): AxiosPromise<Phone[]> => {
-    return axios.post(`${this.url}/phones`, {
+    return axios.post(`${this.url}/`, {
       headers: { Accept: "application/json" },
       data: phone,
     });
   };
 
   public updatePhone = (phone: PhoneType): AxiosPromise<Phone[]> => {
-    return axios.put(`${this.url}/phones`, {
+    return axios.patch(`${this.url}/${phone.id}`, {
       headers: { Accept: "application/json" },
       data: phone,
     });
