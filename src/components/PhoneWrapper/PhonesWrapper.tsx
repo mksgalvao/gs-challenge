@@ -7,6 +7,10 @@ import InputBase from "@material-ui/core/InputBase";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import SearchIcon from "@material-ui/icons/Search";
 import { useHistory } from "react-router-dom";
+import Fab from "@material-ui/core/Fab";
+import AddIcon from "@material-ui/icons/Add";
+import { FormComponent } from "../FormComponent/FormComponent";
+import { DeleteModalComponent } from "../DeleteModalComponent/DeleteModalComponent";
 
 // should be replaced for a card props type
 export const PhonesWrapper = (props: any) => {
@@ -24,13 +28,19 @@ export const PhonesWrapper = (props: any) => {
   const isLoading = useSelector((state) => state.phones.loading);
 
   const [filteredPhones, setFilteredPhones] = useState(phones);
+  const [showModal, setShowModal] = useState({ isOpen: false, type: "edit" });
+  const [clickedPhone, setClickedPhone] = useState();
+  const [deleteModal, setDeleteModal] = useState(false);
 
   useEffect(() => {
     setFilteredPhones(phones);
   }, [phones]);
 
-  const onDeleteClick = () => {
-    console.log("On delete");
+  const onDeleteClick = (e: React.MouseEvent<HTMLElement>, phone: any) => {
+    setClickedPhone(phone);
+    e.stopPropagation();
+
+    setDeleteModal(!deleteModal);
   };
 
   const onCardClick = (phone: any) => {
@@ -39,8 +49,17 @@ export const PhonesWrapper = (props: any) => {
       state: { phone: phone },
     });
   };
-  const onEditClick = () => {
-    console.log("On edit");
+  const onEditClick = (e: React.MouseEvent<HTMLElement>, phone: any) => {
+    setClickedPhone(phone);
+    e.stopPropagation();
+
+    setShowModal({ isOpen: !showModal.isOpen, type: "edit" });
+  };
+
+  const handleAddNewPhone = (e: React.MouseEvent<HTMLElement>) => {
+    e.stopPropagation();
+
+    setShowModal({ isOpen: !showModal.isOpen, type: "add" });
   };
 
   const onSearchPhone = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -55,7 +74,6 @@ export const PhonesWrapper = (props: any) => {
     );
     setFilteredPhones(searching);
   };
-
   return (
     <div>
       {isLoading || !filteredPhones ? (
@@ -86,11 +104,36 @@ export const PhonesWrapper = (props: any) => {
                 key={index}
                 phone={phone}
                 onCardClick={onCardClick}
-                onDelete={onDeleteClick}
-                onEdit={onEditClick}
+                onDelete={(e: React.MouseEvent<HTMLElement>) => {
+                  onDeleteClick(e, phone);
+                }}
+                onEdit={(e: React.MouseEvent<HTMLElement>) => {
+                  onEditClick(e, phone);
+                }}
               />
             ))}
           </div>
+          {showModal.isOpen && (
+            <FormComponent
+              showModal={showModal}
+              phone={clickedPhone ? clickedPhone : ""}
+            />
+          )}
+
+          {deleteModal && (
+            <DeleteModalComponent
+              showModal={deleteModal}
+              phone={clickedPhone}
+            />
+          )}
+          <Fab
+            className={classes.addButton}
+            color="primary"
+            aria-label="add"
+            onClick={handleAddNewPhone}
+          >
+            <AddIcon />
+          </Fab>
         </>
       )}
     </div>

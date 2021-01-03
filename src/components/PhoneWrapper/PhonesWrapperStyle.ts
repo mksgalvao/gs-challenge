@@ -62,5 +62,11 @@ export const phoneWrapperStyles = makeStyles((theme: Theme) =>
         },
       },
     },
+    addButton: {
+      position: "fixed",
+      bottom: "0px",
+      right: "0px",
+      margin: "15px",
+    },
   })
 );
