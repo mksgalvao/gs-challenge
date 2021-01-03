@@ -54,3 +54,9 @@ Run the React project
 ```
 npm start
 ```
+
+## NEXT STEPS
+
+make unitary tests for all components
+improve responsivity
+deploy frontend
