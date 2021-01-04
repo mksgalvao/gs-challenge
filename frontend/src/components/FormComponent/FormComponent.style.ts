@@ -7,6 +7,10 @@ export const formComponentStyle = makeStyles((theme: Theme) =>
       display: "flex",
       flexDirection: "column",
       padding: 30,
+      width: 400,
+      [theme.breakpoints.down("md")]: {
+        width: "auto",
+      },
     },
     title: {
       alignSelf: "center",
@@ -20,14 +24,7 @@ export const formComponentStyle = makeStyles((theme: Theme) =>
       alignItems: "center",
       justifyContent: "center",
     },
-    paper: {
-      width: 600,
-      backgroundColor: theme.palette.background.paper,
-      border: "2px solid blue",
-      borderRadius: 10,
-      boxShadow: theme.shadows[5],
-      padding: theme.spacing(2, 4, 3),
-    },
+
     submit: {
       marginTop: 40,
     },

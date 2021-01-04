@@ -3,9 +3,13 @@ import { createStyles, Theme, makeStyles } from "@material-ui/core/styles";
 export const cardComponentStyles = makeStyles((theme: Theme) =>
   createStyles({
     cardRoot: {
-      maxWidth: 385,
       margin: 10,
-      [theme.breakpoints.between("xs", "sm")]: {
+      [theme.breakpoints.between("xs", "md")]: {
+        alignItems: "center",
+        width: 385,
+      },
+      [theme.breakpoints.up("md")]: {
+        width: 360,
         alignItems: "center",
       },
       cursor: "pointer",

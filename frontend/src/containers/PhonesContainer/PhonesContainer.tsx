@@ -36,7 +36,6 @@ export const PhonesContainer = () => {
         <CircularProgress color="secondary" />
       ) : (
         <div>
-          {console.log(phones)}
           <PhonesWrapper
             phones={phones}
             onAddPhone={dispatchAddPhone}

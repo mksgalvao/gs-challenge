@@ -4,7 +4,19 @@ import * as actions from "../../../actions/phonesActions";
 import expect from "expect";
 import phones from "../../../fixtures/phoneFixtures";
 
-const initialState = { loading: false, error: false, phones: [] };
+const initialState = {
+  loadingGetPhones: false,
+  errorGetPhones: false,
+  phones: [],
+  errorAddPhone: false,
+  errorDeletePhone: false,
+  errorGetPhones: false,
+  errorUpdatePhone: false,
+  loadingAddPhone: false,
+  loadingDeletePhone: false,
+  loadingGetPhones: false,
+  loadingUpdatePhone: false,
+};
 
 describe("phones reducer", () => {
   it("should return the initial state", () => {
@@ -16,16 +28,16 @@ describe("phones reducer", () => {
       type: actions.GET_PHONES_LOADING,
     };
     // it's empty on purpose because it's just starting to fetch posts
-    expect(reducer({}, startAction)).toEqual({ loading: true });
+    expect(reducer({}, startAction)).toEqual({ loadingGetPhones: true });
   });
 
   it("should handle GET_PHONES_SUCCESS", () => {
     const successAction = {
       type: actions.GET_PHONES_SUCCESS,
-      phones: phones, // important to pass correct payload, that's what the tests are for ;)
+      phones: phones,
     };
     expect(reducer({}, successAction)).toEqual({
-      loading: false,
+      loadingGetPhones: false,
       phones: phones,
     });
   });
@@ -35,6 +47,9 @@ describe("phones reducer", () => {
       type: actions.GET_PHONES_ERROR,
       error: { success: false },
     };
-    expect(reducer({}, failAction)).toEqual({ error: true, loading: false });
+    expect(reducer({}, failAction)).toEqual({
+      errorGetPhones: true,
+      loadingGetPhones: false,
+    });
   });
 });

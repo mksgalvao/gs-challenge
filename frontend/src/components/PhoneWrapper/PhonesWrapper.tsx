@@ -84,7 +84,6 @@ export const PhonesWrapper = (props: any) => {
               />
             </div>
           </div>
-          {console.log(filteredPhones)}
           <div className={classes.cardsWrapper}>
             {Object.values(filteredPhones).map((phone: any, index: number) => (
               <CardComponent

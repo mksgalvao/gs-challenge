@@ -19,7 +19,6 @@ export const FormComponent = (props: any) => {
         aria-describedby="server-modal-description"
         className={classes.modal}
         container={() => rootRef.current}
-        maxWidth="lg"
         onClose={handleClose}
       >
         <h1 className={classes.title}>

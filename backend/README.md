@@ -37,7 +37,7 @@ npm start
 
 ## NEXT STEPS
 
-make pact tests for backend
-make unitary tests for backend
-make a docker container for backend
-deploy backend
+- make pact tests for backend
+- make unitary tests for backend
+- make a docker container for backend
+- deploy backend

@@ -20,7 +20,6 @@ export const getPhonesList = () => (dispatch: any) => {
 
   const phonesService = new PhoneService("http://localhost:5000/api");
   phonesService.getPhones().then((response) => {
-    console.log("->", response);
     if (response.status === 200) {
       dispatch({
         type: GET_PHONES_SUCCESS,
@@ -41,7 +40,6 @@ export const addPhone = (phone: PhoneType) => (dispatch: any) => {
 
   const phonesService = new PhoneService("http://localhost:5000/api");
   phonesService.addPhone(phone).then((response) => {
-    console.log("add phoneSuccess", response);
     if (response.status === 200) {
       dispatch({
         type: ADD_PHONE_SUCCESS,

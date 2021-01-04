@@ -11,9 +11,10 @@ export const phoneWrapperStyles = makeStyles((theme: Theme) =>
       display: "flex",
       flexWrap: "wrap",
 
-      [theme.breakpoints.between("xs", "sm")]: {
+      [theme.breakpoints.between("xs", "md")]: {
         flexDirection: "column !important",
         maxWidth: "100%",
+        alignItems: "center",
       },
     },
     phoneWrapperHeader: {

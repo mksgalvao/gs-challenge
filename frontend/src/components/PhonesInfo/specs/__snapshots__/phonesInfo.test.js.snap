@@ -1,3 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Testing PhonesInfo phonesInfo should render 1`] = `ShallowWrapper {}`;
+exports[`Testing PhonesInfo phonesInfo should render 1`] = `
+<div
+  className="makeStyles-root-1"
+>
+  <WithStyles(ForwardRef(Card))
+    className="makeStyles-cardWrapper-2"
+  >
+    <WithStyles(ForwardRef(Typography))
+      paragraph={true}
+    />
+    <WithStyles(ForwardRef(CardMedia))
+      className="makeStyles-media-3"
+    />
+    <WithStyles(ForwardRef(CardContent))>
+      <WithStyles(ForwardRef(Typography))
+        paragraph={true}
+      >
+        NaN €
+      </WithStyles(ForwardRef(Typography))>
+      <WithStyles(ForwardRef(Typography))
+        color="textSecondary"
+        component="p"
+        variant="body2"
+      />
+      <WithStyles(ForwardRef(Typography))
+        color="textSecondary"
+        component="p"
+        variant="body2"
+      />
+      <WithStyles(ForwardRef(Typography))
+        color="textSecondary"
+        component="p"
+        variant="body2"
+      />
+      <WithStyles(ForwardRef(Typography))
+        color="textSecondary"
+        component="p"
+        variant="body2"
+      />
+      <WithStyles(ForwardRef(Typography))
+        color="textSecondary"
+        component="p"
+        variant="body2"
+      />
+    </WithStyles(ForwardRef(CardContent))>
+  </WithStyles(ForwardRef(Card))>
+</div>
+`;

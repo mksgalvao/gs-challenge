@@ -14,7 +14,9 @@ exports[`Testing cardComponent CardComponent should render 1`] = `
     image="https://benotac.es/wp-content/uploads/2018/06/iPhone7-Negro-Mate-Angulos.jpg"
     title={769}
   />
-  <WithStyles(ForwardRef(CardContent))>
+  <WithStyles(ForwardRef(CardContent))
+    className="makeStyles-description-4"
+  >
     <WithStyles(ForwardRef(Typography))
       color="textSecondary"
       component="p"
@@ -23,9 +25,7 @@ exports[`Testing cardComponent CardComponent should render 1`] = `
       lorem ipsum dolor sit amet consectetur.
     </WithStyles(ForwardRef(Typography))>
   </WithStyles(ForwardRef(CardContent))>
-  <WithStyles(ForwardRef(CardActions))
-    disableSpacing={true}
-  >
+  <WithStyles(ForwardRef(CardActions))>
     <WithStyles(ForwardRef(IconButton))
       aria-label="delete"
       onClick={[MockFunction]}

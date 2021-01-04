@@ -1,5 +1,5 @@
-I, [2020-12-30T09:17:00.670220 #395462]  INFO -- : Registered expected interaction GET /phones
-D, [2020-12-30T09:17:00.671134 #395462] DEBUG -- : {
+I, [2021-01-04T02:53:28.329241 #513619]  INFO -- : Registered expected interaction GET /phones
+D, [2021-01-04T02:53:28.329938 #513619] DEBUG -- : {
   "description": "A get request to get a list of phones",
   "providerState": "a phone list exists",
   "request": {
@@ -29,7 +29,7 @@ D, [2020-12-30T09:17:00.671134 #395462] DEBUG -- : {
         "name": "Galaxy 7",
         "manufacturer": "Samsung",
         "description": "lorem ipsum dolor sit amet consectetur.",
-        "color": "black",
+        "color": "gold",
         "price": 769,
         "imageFileName": "https://images.mobilefun.co.uk/graphics/450pixelp/57143.jpg",
         "screen": "4,7 inch IPS",
@@ -40,9 +40,9 @@ D, [2020-12-30T09:17:00.671134 #395462] DEBUG -- : {
         "id": 3,
         "name": "Redmi note 9",
         "manufacturer": "Xiaomi",
-        "description": "lorem ipsum dolor sit amet consectetur.",
-        "color": "black",
-        "price": 769,
+        "description": "the Redmi Note 9 is an entry-level offering from Xiaomi in the Note 9 series",
+        "color": "multicolors",
+        "price": 199,
         "imageFileName": "https://i.blogs.es/a94951/xiaomi-redmi-note-9-pro-00-04/1366_2000.jpg",
         "screen": "4,7 inch IPS",
         "processor": "A10 Fusion",
@@ -76,21 +76,21 @@ D, [2020-12-30T09:17:00.671134 #395462] DEBUG -- : {
   },
   "metadata": null
 }
-I, [2020-12-30T09:17:00.680117 #395462]  INFO -- : Received request GET /phones
-D, [2020-12-30T09:17:00.680285 #395462] DEBUG -- : {
+I, [2021-01-04T02:53:28.338932 #513619]  INFO -- : Received request GET /phones
+D, [2021-01-04T02:53:28.339074 #513619] DEBUG -- : {
   "path": "/phones",
   "query": "",
   "method": "get",
   "headers": {
     "Accept": "application/json",
     "User-Agent": "axios/0.21.1",
-    "Host": "127.0.0.1:46031",
+    "Host": "127.0.0.1:42075",
     "Connection": "close",
     "Version": "HTTP/1.1"
   }
 }
-I, [2020-12-30T09:17:00.680834 #395462]  INFO -- : Found matching response for GET /phones
-D, [2020-12-30T09:17:00.681177 #395462] DEBUG -- : {
+I, [2021-01-04T02:53:28.339547 #513619]  INFO -- : Found matching response for GET /phones
+D, [2021-01-04T02:53:28.339912 #513619] DEBUG -- : {
   "status": 200,
   "headers": {
     "Content-Type": "application/json"
@@ -113,7 +113,7 @@ D, [2020-12-30T09:17:00.681177 #395462] DEBUG -- : {
       "name": "Galaxy 7",
       "manufacturer": "Samsung",
       "description": "lorem ipsum dolor sit amet consectetur.",
-      "color": "black",
+      "color": "gold",
       "price": 769,
       "imageFileName": "https://images.mobilefun.co.uk/graphics/450pixelp/57143.jpg",
       "screen": "4,7 inch IPS",
@@ -124,9 +124,9 @@ D, [2020-12-30T09:17:00.681177 #395462] DEBUG -- : {
       "id": 3,
       "name": "Redmi note 9",
       "manufacturer": "Xiaomi",
-      "description": "lorem ipsum dolor sit amet consectetur.",
-      "color": "black",
-      "price": 769,
+      "description": "the Redmi Note 9 is an entry-level offering from Xiaomi in the Note 9 series",
+      "color": "multicolors",
+      "price": 199,
       "imageFileName": "https://i.blogs.es/a94951/xiaomi-redmi-note-9-pro-00-04/1366_2000.jpg",
       "screen": "4,7 inch IPS",
       "processor": "A10 Fusion",
@@ -158,11 +158,379 @@ D, [2020-12-30T09:17:00.681177 #395462] DEBUG -- : {
     }
   ]
 }
-I, [2020-12-30T09:17:00.687194 #395462]  INFO -- : Verifying - interactions matched
-I, [2020-12-30T09:17:00.690862 #395462]  INFO -- : Cleared interactions
-I, [2020-12-30T09:17:00.697532 #395462]  INFO -- : Updating pact for provider at /home/mksgalvao/Desktop/GuideSmiths_challenge/guide-smiths-challenge/pact/pacts/consumer-provider.json
-I, [2020-12-30T09:17:00.698709 #395462]  INFO -- : *****************************************************************************
-I, [2020-12-30T09:17:00.698855 #395462]  INFO -- : Updating existing file ./home/mksgalvao/Desktop/GuideSmiths_challenge/guide-smiths-challenge/pact/pacts/consumer-provider.json as pactfile_write_mode is :update
-I, [2020-12-30T09:17:00.698900 #395462]  INFO -- : Only interactions defined in this test run will be updated.
-I, [2020-12-30T09:17:00.698928 #395462]  INFO -- : As interactions are identified by description and provider state, pleased note that if either of these have changed, the old interactions won't be removed from the pact file until the specs are next run with :pactfile_write_mode => :overwrite.
-I, [2020-12-30T09:17:00.698951 #395462]  INFO -- : *****************************************************************************
+I, [2021-01-04T02:53:28.347414 #513619]  INFO -- : Verifying - interactions matched
+I, [2021-01-04T02:53:28.352048 #513619]  INFO -- : Cleared interactions
+I, [2021-01-04T02:53:28.360709 #513619]  INFO -- : Registered expected interaction GET /phones
+D, [2021-01-04T02:53:28.361015 #513619] DEBUG -- : {
+  "description": "A get request to get a list of phones",
+  "providerState": "a phone list exists",
+  "request": {
+    "method": "GET",
+    "path": "/phones"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": [
+      {
+        "id": 0,
+        "name": "iPhone 7",
+        "manufacturer": "Apple",
+        "description": "lorem ipsum dolor sit amet consectetur.",
+        "color": "black",
+        "price": 769,
+        "imageFileName": "https://benotac.es/wp-content/uploads/2018/06/iPhone7-Negro-Mate-Angulos.jpg",
+        "screen": "4,7 inch IPS",
+        "processor": "A10 Fusion",
+        "ram": 2
+      },
+      {
+        "id": 2,
+        "name": "Galaxy 7",
+        "manufacturer": "Samsung",
+        "description": "lorem ipsum dolor sit amet consectetur.",
+        "color": "gold",
+        "price": 769,
+        "imageFileName": "https://images.mobilefun.co.uk/graphics/450pixelp/57143.jpg",
+        "screen": "4,7 inch IPS",
+        "processor": "A10 Fusion",
+        "ram": 2
+      },
+      {
+        "id": 3,
+        "name": "Redmi note 9",
+        "manufacturer": "Xiaomi",
+        "description": "the Redmi Note 9 is an entry-level offering from Xiaomi in the Note 9 series",
+        "color": "multicolors",
+        "price": 199,
+        "imageFileName": "https://i.blogs.es/a94951/xiaomi-redmi-note-9-pro-00-04/1366_2000.jpg",
+        "screen": "4,7 inch IPS",
+        "processor": "A10 Fusion",
+        "ram": 2
+      },
+      {
+        "id": 4,
+        "name": "Moto g7",
+        "manufacturer": "Motorola",
+        "description": "lorem ipsum dolor sit amet consectetur.",
+        "color": "black",
+        "price": 769,
+        "imageFileName": "https://static.kemikcdn.com/2019/11/G7x2.jpg",
+        "screen": "4,7 inch IPS",
+        "processor": "A10 Fusion",
+        "ram": 2
+      },
+      {
+        "id": 5,
+        "name": "Asus Zenphone 5",
+        "manufacturer": "asus",
+        "description": "lorem ipsum dolor sit amet consectetur.",
+        "color": "black",
+        "price": 769,
+        "imageFileName": "https://i.zst.com.br/thumbs/12/34/37/602513659.jpg",
+        "screen": "4,7 inch IPS",
+        "processor": "A10 Fusion",
+        "ram": 2
+      }
+    ]
+  },
+  "metadata": null
+}
+I, [2021-01-04T02:53:28.366864 #513619]  INFO -- : Received request POST /
+D, [2021-01-04T02:53:28.367151 #513619] DEBUG -- : {
+  "path": "/",
+  "query": "",
+  "method": "post",
+  "body": {
+    "headers": {
+      "Accept": "application/json"
+    },
+    "phone": {
+      "id": 1,
+      "name": "Galaxy 7",
+      "manufacturer": "Samsung",
+      "description": "lorem ipsum dolor sit amet consectetur.",
+      "color": "black",
+      "price": 769,
+      "imageFileName": "https://images.mobilefun.co.uk/graphics/450pixelp/57143.jpg",
+      "screen": "4,7 inch IPS",
+      "processor": "A10 Fusion",
+      "ram": 2
+    }
+  },
+  "headers": {
+    "Content-Length": "320",
+    "Content-Type": "application/json;charset=utf-8",
+    "Accept": "application/json, text/plain, */*",
+    "User-Agent": "axios/0.21.1",
+    "Host": "127.0.0.1:42075",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2021-01-04T02:53:28.367324 #513619] ERROR -- : No matching interaction found for POST /
+E, [2021-01-04T02:53:28.367362 #513619] ERROR -- : Interaction diffs for that route:
+E, [2021-01-04T02:53:28.367398 #513619] ERROR -- : 
+W, [2021-01-04T02:53:28.372586 #513619]  WARN -- : Verifying - actual interactions do not match expected interactions. 
+Missing requests:
+	GET /phones
+
+Unexpected requests:
+	POST /
+
+
+W, [2021-01-04T02:53:28.372665 #513619]  WARN -- : Missing requests:
+	GET /phones
+
+Unexpected requests:
+	POST /
+
+
+I, [2021-01-04T02:53:28.393629 #513619]  INFO -- : Cleared interactions
+I, [2021-01-04T02:53:28.401902 #513619]  INFO -- : Registered expected interaction GET /phones
+D, [2021-01-04T02:53:28.402342 #513619] DEBUG -- : {
+  "description": "A get request to get a list of phones",
+  "providerState": "a phone list exists",
+  "request": {
+    "method": "GET",
+    "path": "/phones"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": [
+      {
+        "id": 0,
+        "name": "iPhone 7",
+        "manufacturer": "Apple",
+        "description": "lorem ipsum dolor sit amet consectetur.",
+        "color": "black",
+        "price": 769,
+        "imageFileName": "https://benotac.es/wp-content/uploads/2018/06/iPhone7-Negro-Mate-Angulos.jpg",
+        "screen": "4,7 inch IPS",
+        "processor": "A10 Fusion",
+        "ram": 2
+      },
+      {
+        "id": 2,
+        "name": "Galaxy 7",
+        "manufacturer": "Samsung",
+        "description": "lorem ipsum dolor sit amet consectetur.",
+        "color": "gold",
+        "price": 769,
+        "imageFileName": "https://images.mobilefun.co.uk/graphics/450pixelp/57143.jpg",
+        "screen": "4,7 inch IPS",
+        "processor": "A10 Fusion",
+        "ram": 2
+      },
+      {
+        "id": 3,
+        "name": "Redmi note 9",
+        "manufacturer": "Xiaomi",
+        "description": "the Redmi Note 9 is an entry-level offering from Xiaomi in the Note 9 series",
+        "color": "multicolors",
+        "price": 199,
+        "imageFileName": "https://i.blogs.es/a94951/xiaomi-redmi-note-9-pro-00-04/1366_2000.jpg",
+        "screen": "4,7 inch IPS",
+        "processor": "A10 Fusion",
+        "ram": 2
+      },
+      {
+        "id": 4,
+        "name": "Moto g7",
+        "manufacturer": "Motorola",
+        "description": "lorem ipsum dolor sit amet consectetur.",
+        "color": "black",
+        "price": 769,
+        "imageFileName": "https://static.kemikcdn.com/2019/11/G7x2.jpg",
+        "screen": "4,7 inch IPS",
+        "processor": "A10 Fusion",
+        "ram": 2
+      },
+      {
+        "id": 5,
+        "name": "Asus Zenphone 5",
+        "manufacturer": "asus",
+        "description": "lorem ipsum dolor sit amet consectetur.",
+        "color": "black",
+        "price": 769,
+        "imageFileName": "https://i.zst.com.br/thumbs/12/34/37/602513659.jpg",
+        "screen": "4,7 inch IPS",
+        "processor": "A10 Fusion",
+        "ram": 2
+      }
+    ]
+  },
+  "metadata": null
+}
+I, [2021-01-04T02:53:28.407726 #513619]  INFO -- : Received request PATCH /1
+D, [2021-01-04T02:53:28.408050 #513619] DEBUG -- : {
+  "path": "/1",
+  "query": "",
+  "method": "patch",
+  "body": {
+    "headers": {
+      "Accept": "application/json"
+    },
+    "phone": {
+      "id": 1,
+      "name": "Galaxy 7",
+      "manufacturer": "Samsung",
+      "description": "lorem ipsum dolor sit amet consectetur.",
+      "color": "black",
+      "price": 769,
+      "imageFileName": "https://images.mobilefun.co.uk/graphics/450pixelp/57143.jpg",
+      "screen": "4,7 inch IPS",
+      "processor": "A10 Fusion",
+      "ram": 2
+    }
+  },
+  "headers": {
+    "Content-Length": "320",
+    "Content-Type": "application/json;charset=utf-8",
+    "Accept": "application/json, text/plain, */*",
+    "User-Agent": "axios/0.21.1",
+    "Host": "127.0.0.1:42075",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2021-01-04T02:53:28.408233 #513619] ERROR -- : No matching interaction found for PATCH /1
+E, [2021-01-04T02:53:28.408266 #513619] ERROR -- : Interaction diffs for that route:
+E, [2021-01-04T02:53:28.408335 #513619] ERROR -- : 
+W, [2021-01-04T02:53:28.412806 #513619]  WARN -- : Verifying - actual interactions do not match expected interactions. 
+Missing requests:
+	GET /phones
+
+Unexpected requests:
+	PATCH /1
+
+
+W, [2021-01-04T02:53:28.412881 #513619]  WARN -- : Missing requests:
+	GET /phones
+
+Unexpected requests:
+	PATCH /1
+
+
+I, [2021-01-04T02:53:28.418699 #513619]  INFO -- : Cleared interactions
+I, [2021-01-04T02:53:28.425603 #513619]  INFO -- : Registered expected interaction GET /phones
+D, [2021-01-04T02:53:28.426064 #513619] DEBUG -- : {
+  "description": "A get request to get a list of phones",
+  "providerState": "a phone list exists",
+  "request": {
+    "method": "GET",
+    "path": "/phones"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": [
+      {
+        "id": 0,
+        "name": "iPhone 7",
+        "manufacturer": "Apple",
+        "description": "lorem ipsum dolor sit amet consectetur.",
+        "color": "black",
+        "price": 769,
+        "imageFileName": "https://benotac.es/wp-content/uploads/2018/06/iPhone7-Negro-Mate-Angulos.jpg",
+        "screen": "4,7 inch IPS",
+        "processor": "A10 Fusion",
+        "ram": 2
+      },
+      {
+        "id": 2,
+        "name": "Galaxy 7",
+        "manufacturer": "Samsung",
+        "description": "lorem ipsum dolor sit amet consectetur.",
+        "color": "gold",
+        "price": 769,
+        "imageFileName": "https://images.mobilefun.co.uk/graphics/450pixelp/57143.jpg",
+        "screen": "4,7 inch IPS",
+        "processor": "A10 Fusion",
+        "ram": 2
+      },
+      {
+        "id": 3,
+        "name": "Redmi note 9",
+        "manufacturer": "Xiaomi",
+        "description": "the Redmi Note 9 is an entry-level offering from Xiaomi in the Note 9 series",
+        "color": "multicolors",
+        "price": 199,
+        "imageFileName": "https://i.blogs.es/a94951/xiaomi-redmi-note-9-pro-00-04/1366_2000.jpg",
+        "screen": "4,7 inch IPS",
+        "processor": "A10 Fusion",
+        "ram": 2
+      },
+      {
+        "id": 4,
+        "name": "Moto g7",
+        "manufacturer": "Motorola",
+        "description": "lorem ipsum dolor sit amet consectetur.",
+        "color": "black",
+        "price": 769,
+        "imageFileName": "https://static.kemikcdn.com/2019/11/G7x2.jpg",
+        "screen": "4,7 inch IPS",
+        "processor": "A10 Fusion",
+        "ram": 2
+      },
+      {
+        "id": 5,
+        "name": "Asus Zenphone 5",
+        "manufacturer": "asus",
+        "description": "lorem ipsum dolor sit amet consectetur.",
+        "color": "black",
+        "price": 769,
+        "imageFileName": "https://i.zst.com.br/thumbs/12/34/37/602513659.jpg",
+        "screen": "4,7 inch IPS",
+        "processor": "A10 Fusion",
+        "ram": 2
+      }
+    ]
+  },
+  "metadata": null
+}
+I, [2021-01-04T02:53:28.430911 #513619]  INFO -- : Received request DELETE /1
+D, [2021-01-04T02:53:28.431088 #513619] DEBUG -- : {
+  "path": "/1",
+  "query": "",
+  "method": "delete",
+  "headers": {
+    "Accept": "application/json",
+    "User-Agent": "axios/0.21.1",
+    "Host": "127.0.0.1:42075",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2021-01-04T02:53:28.431251 #513619] ERROR -- : No matching interaction found for DELETE /1
+E, [2021-01-04T02:53:28.431284 #513619] ERROR -- : Interaction diffs for that route:
+E, [2021-01-04T02:53:28.431316 #513619] ERROR -- : 
+W, [2021-01-04T02:53:28.435942 #513619]  WARN -- : Verifying - actual interactions do not match expected interactions. 
+Missing requests:
+	GET /phones
+
+Unexpected requests:
+	DELETE /1
+
+
+W, [2021-01-04T02:53:28.436025 #513619]  WARN -- : Missing requests:
+	GET /phones
+
+Unexpected requests:
+	DELETE /1
+
+
+I, [2021-01-04T02:53:28.441926 #513619]  INFO -- : Cleared interactions
+I, [2021-01-04T02:53:28.448963 #513619]  INFO -- : Updating pact for provider at /home/mksgalvao/Desktop/GuideSmiths_challenge/guide-smiths-challenge/frontend/pact/pacts/consumer-provider.json
+I, [2021-01-04T02:53:28.450237 #513619]  INFO -- : *****************************************************************************
+I, [2021-01-04T02:53:28.450350 #513619]  INFO -- : Updating existing file ./home/mksgalvao/Desktop/GuideSmiths_challenge/guide-smiths-challenge/frontend/pact/pacts/consumer-provider.json as pactfile_write_mode is :update
+I, [2021-01-04T02:53:28.450423 #513619]  INFO -- : Only interactions defined in this test run will be updated.
+I, [2021-01-04T02:53:28.450457 #513619]  INFO -- : As interactions are identified by description and provider state, pleased note that if either of these have changed, the old interactions won't be removed from the pact file until the specs are next run with :pactfile_write_mode => :overwrite.
+I, [2021-01-04T02:53:28.450489 #513619]  INFO -- : *****************************************************************************
