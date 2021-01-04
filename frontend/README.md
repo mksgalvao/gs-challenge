@@ -58,8 +58,6 @@ npm start
 ## NEXT STEPS
 
 - validate input data
-- take a look on broked tests
 - make unitary tests for all components
-- put the api url in .env file
 - improve responsivity
 - deploy frontend
