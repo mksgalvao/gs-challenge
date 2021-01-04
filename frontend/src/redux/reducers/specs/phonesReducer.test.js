@@ -2,7 +2,7 @@ import reducer from "../phonesReducer";
 import * as actions from "../../../actions/phonesActions";
 
 import expect from "expect";
-import phones from "../../../fixtures/phoneFixtures";
+import { iPhone7, PhonesList } from "../../../fixtures/phoneFixtures";
 
 const initialState = {
   loadingGetPhones: false,
@@ -27,18 +27,17 @@ describe("phones reducer", () => {
     const startAction = {
       type: actions.GET_PHONES_LOADING,
     };
-    // it's empty on purpose because it's just starting to fetch posts
     expect(reducer({}, startAction)).toEqual({ loadingGetPhones: true });
   });
 
   it("should handle GET_PHONES_SUCCESS", () => {
     const successAction = {
       type: actions.GET_PHONES_SUCCESS,
-      phones: phones,
+      data: PhonesList,
     };
     expect(reducer({}, successAction)).toEqual({
       loadingGetPhones: false,
-      phones: phones,
+      phones: PhonesList,
     });
   });
 

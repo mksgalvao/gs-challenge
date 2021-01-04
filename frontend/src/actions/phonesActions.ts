@@ -18,12 +18,13 @@ export const getPhonesList = () => (dispatch: any) => {
     type: GET_PHONES_LOADING,
   });
 
-  const phonesService = new PhoneService("http://localhost:5000/api");
+  const phonesService = new PhoneService(`${process.env.REACT_APP_API_URL}`);
   phonesService.getPhones().then((response) => {
     if (response.status === 200) {
       dispatch({
         type: GET_PHONES_SUCCESS,
-        data: response.data,
+        //@ts-ignore
+        data: response.data.phones,
       });
     } else {
       dispatch({
@@ -38,13 +39,13 @@ export const addPhone = (phone: PhoneType) => (dispatch: any) => {
     type: ADD_PHONE_LOADING,
   });
 
-  const phonesService = new PhoneService("http://localhost:5000/api");
+  const phonesService = new PhoneService(`${process.env.REACT_APP_API_URL}`);
   phonesService.addPhone(phone).then((response) => {
-    if (response.status === 200) {
+    console.log(response);
+    if (response.status === 201) {
       dispatch({
         type: ADD_PHONE_SUCCESS,
       });
-
       dispatch(getPhonesList());
     } else {
       dispatch({
@@ -59,7 +60,7 @@ export const deletePhone = (phoneId: number) => (dispatch: any) => {
     type: DELETE_PHONE_LOADING,
   });
 
-  const phonesService = new PhoneService("http://localhost:5000/api");
+  const phonesService = new PhoneService(`${process.env.REACT_APP_API_URL}`);
   phonesService.deletePhone(phoneId).then((response) => {
     if (response.status === 200) {
       dispatch({
@@ -79,7 +80,7 @@ export const updatePhone = (phone: PhoneType) => (dispatch: any) => {
     type: UPDATE_PHONE_LOADING,
   });
 
-  const phonesService = new PhoneService("http://localhost:5000/api");
+  const phonesService = new PhoneService(`${process.env.REACT_APP_API_URL}`);
   phonesService.updatePhone(phone).then((response) => {
     if (response.status === 200) {
       dispatch({

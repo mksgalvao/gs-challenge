@@ -32,13 +32,5 @@ describe("Testing cardComponent", () => {
 
   it("Phones Wrapper should render", () => {
     expect(phonesWrapper).toMatchSnapshot();
-  }),
-    it("Should call on search function when onChange search input", () => {
-      const searchInput = phonesWrapper.find(InputBase);
-      const cards = phonesWrapper.find(CardComponent);
-      //expect(cards).toHaveLength(5);
-
-      searchInput.simulate("change", { target: { value: "iphone" } });
-      //expect(cards).toHaveLength(1);
-    });
+  });
 });

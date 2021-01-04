@@ -28,3 +28,5 @@ yarn-error.log*
 .eslintcache
 frontend/node_modules/.cache/babel-loader/
 frontend/.eslintcache
+backend/node_modules/
+frontend/.env
