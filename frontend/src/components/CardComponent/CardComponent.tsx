@@ -29,12 +29,13 @@ export const CardComponent = (props: any) => {
         image={props.phone.imageFileName}
         title={props.phone.price}
       />
-      <CardContent>
+      <CardContent className={classes.description}>
         <Typography variant="body2" color="textSecondary" component="p">
           {props.phone.description}
         </Typography>
       </CardContent>
-      <CardActions disableSpacing>
+
+      <CardActions>
         <IconButton aria-label="delete" onClick={props.onDelete}>
           <DeleteIcon />
         </IconButton>

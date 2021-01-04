@@ -20,5 +20,9 @@ export const cardComponentStyles = makeStyles((theme: Theme) =>
       },
     },
     moreInfo: { marginLeft: "auto" },
+    description: {
+      marginTop: 10,
+      height: 170,
+    },
   })
 );

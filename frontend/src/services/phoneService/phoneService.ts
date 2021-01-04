@@ -22,16 +22,20 @@ export class PhoneService {
   };
 
   public addPhone = (phone: PhoneType): AxiosPromise<Phone[]> => {
-    return axios.post(`${this.url}/`, {
+    console.log("ADD---->", phone);
+
+    return axios.post(`${this.url}`, {
       headers: { Accept: "application/json" },
-      data: phone,
+      phone,
     });
   };
 
   public updatePhone = (phone: PhoneType): AxiosPromise<Phone[]> => {
+    console.log("update---->", phone);
+
     return axios.patch(`${this.url}/${phone.id}`, {
       headers: { Accept: "application/json" },
-      data: phone,
+      phone,
     });
   };
 }

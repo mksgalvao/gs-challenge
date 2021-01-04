@@ -41,11 +41,13 @@ export const addPhone = (phone: PhoneType) => (dispatch: any) => {
 
   const phonesService = new PhoneService("http://localhost:5000/api");
   phonesService.addPhone(phone).then((response) => {
+    console.log("add phoneSuccess", response);
     if (response.status === 200) {
       dispatch({
         type: ADD_PHONE_SUCCESS,
-        data: response.data,
       });
+
+      dispatch(getPhonesList());
     } else {
       dispatch({
         type: ADD_PHONE_ERROR,
@@ -64,8 +66,8 @@ export const deletePhone = (phoneId: number) => (dispatch: any) => {
     if (response.status === 200) {
       dispatch({
         type: DELETE_PHONE_SUCCESS,
-        data: response.data,
       });
+      dispatch(getPhonesList());
     } else {
       dispatch({
         type: DELETE_PHONE_ERROR,
@@ -84,8 +86,8 @@ export const updatePhone = (phone: PhoneType) => (dispatch: any) => {
     if (response.status === 200) {
       dispatch({
         type: UPDATE_PHONE_SUCCESS,
-        data: response.data,
       });
+      dispatch(getPhonesList());
     } else {
       dispatch({
         type: UPDATE_PHONE_ERROR,

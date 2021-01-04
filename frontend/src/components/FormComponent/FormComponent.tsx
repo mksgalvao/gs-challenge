@@ -30,7 +30,7 @@ export const FormComponent = (props: any) => {
           initialValues={
             props.showModal.type === "add"
               ? {
-                  phoneName: "",
+                  name: "",
                   price: "",
                   description: "",
                   manufacturer: "",
@@ -39,9 +39,10 @@ export const FormComponent = (props: any) => {
                   screen: "",
                   processor: "",
                   ram: "",
+                  id: "",
                 }
               : {
-                  phoneName: props.phone.name,
+                  name: props.phone.name,
                   price: props.phone.price,
                   description: props.phone.description,
                   manufacturer: props.phone.manufacturer,
@@ -50,6 +51,7 @@ export const FormComponent = (props: any) => {
                   screen: props.phone.screen,
                   processor: props.phone.processor,
                   ram: props.phone.ram,
+                  id: props.phone.id,
                 }
           }
           onSubmit={(
@@ -57,17 +59,19 @@ export const FormComponent = (props: any) => {
             { setSubmitting }: FormikHelpers<Values>
           ) => {
             setTimeout(() => {
-              alert(JSON.stringify(values, null, 2));
+              props.showModal.type === "add"
+                ? props.addPhoneSubmit(values)
+                : props.editPhoneSubmit(values);
               setSubmitting(false);
               setOpen(false);
             }, 500);
           }}
         >
           <Form className={classes.formRoot}>
-            <label htmlFor="phoneName">Name</label>
+            <label htmlFor="name">Name</label>
             <Field
-              id="phoneName"
-              name="phoneName"
+              id="name"
+              name="name"
               placeholder={
                 props.showModal.type === "edit" ? props.phone.name : "name"
               }

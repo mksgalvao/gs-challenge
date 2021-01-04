@@ -28,13 +28,6 @@ const getPhonesList = async (req, res, next) => {
 };
 
 const addPhone = async (req, res, next) => {
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return next(
-      new HttpError("Invalid inputs passed, please check your data.", 422)
-    );
-  }
-
   const {
     name,
     price,
@@ -45,7 +38,7 @@ const addPhone = async (req, res, next) => {
     imageFileName,
     color,
     screen,
-  } = req.body;
+  } = req.body.phone;
 
   const createdPhone = new Phone({
     name,
@@ -73,13 +66,6 @@ const addPhone = async (req, res, next) => {
 };
 
 const updatePhone = async (req, res, next) => {
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return next(
-      new HttpError("Invalid inputs passed, please check your data.", 422)
-    );
-  }
-
   const {
     name,
     price,
@@ -90,7 +76,7 @@ const updatePhone = async (req, res, next) => {
     imageFileName,
     color,
     screen,
-  } = req.body;
+  } = req.body.phone;
   const phoneId = req.params.pid;
 
   let phone;

@@ -12,7 +12,7 @@ export const DeleteModalComponent = (props: any) => {
   };
 
   const handleDeletePhone = () => {
-    // props.deletePhone();
+    props.deletePhone(props.phone);
     setOpen(false);
   };
   return (

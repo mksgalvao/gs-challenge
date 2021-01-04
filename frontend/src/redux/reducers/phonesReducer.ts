@@ -54,7 +54,6 @@ const PhoneReducer = (state = initialState, action: any) => {
     case UPDATE_PHONE_SUCCESS:
       return {
         loadingUpdatePhone: false,
-        phones: action.data,
       };
     case ADD_PHONE_LOADING:
       return {
@@ -68,7 +67,6 @@ const PhoneReducer = (state = initialState, action: any) => {
     case ADD_PHONE_SUCCESS:
       return {
         loadingAddPhone: false,
-        phones: action.data,
       };
     case DELETE_PHONE_LOADING:
       return {
@@ -82,7 +80,6 @@ const PhoneReducer = (state = initialState, action: any) => {
     case DELETE_PHONE_SUCCESS:
       return {
         loadingDeletePhone: false,
-        phones: action.data,
       };
     default:
       return { ...state };
